@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
-const MenuItem = props => {
+const MenuItem = (props) => {
   return (
     <Card className={props.className}>
       <CardActionArea>
@@ -29,7 +29,7 @@ const MenuItem = props => {
             Price: {props.itemPrice}
           </Typography>
           <Typography variant="body2" component="p" className="item-info">
-            Alergies:{props.itemAllergy.map(allergy => `${allergy} `)}
+            Alergies:{props.itemAllergy.map((allergy) => `${allergy} `)}
           </Typography>
           <Typography variant="body2" component="p" className="item-desc">
             {props.itemDescription}

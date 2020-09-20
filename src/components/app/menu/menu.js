@@ -1,14 +1,10 @@
-import React, { Component, useEffect, useState } from "react";
-import MenuItem from "./menu_item";
+import React, { useEffect, useState } from "react";
 import CategoryComponent from "./menu_category";
-import Grid from "@material-ui/core/Grid";
-import getItemIndex from "../../../utils/itemIndex";
-import Typography from "@material-ui/core/Typography";
-import { getAllCourseNames, getIndexOf } from "../../../utils/courseName";
+import { getAllCourseNames } from "../../../utils/courseName";
 import getCourseItems from "../../../utils/courseItem";
 import FlatList from "flatlist-react";
 
-const MenuComponent = props => {
+const MenuComponent = (props) => {
   const [courseItems, setCourseItems] = useState([]);
 
   useEffect(() => {
@@ -40,7 +36,7 @@ const MenuComponent = props => {
       style={{
         alignItems: "center",
         margin: 0,
-        padding: 0
+        padding: 0,
       }}
     >
       <FlatList

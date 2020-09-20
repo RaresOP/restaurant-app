@@ -1,13 +1,11 @@
-import React, { Component, useEffect, useState } from "react";
+import React from "react";
 import MenuItem from "./menu_item";
-import Grid from "@material-ui/core/Grid";
-import getItemIndex from "../../../utils/itemIndex";
 import Typography from "@material-ui/core/Typography";
-import { getAllCourseNames, getIndexOf } from "../../../utils/courseName";
+import { getIndexOf } from "../../../utils/courseName";
 import getCourseItems from "../../../utils/courseItem";
 import FlatList from "flatlist-react";
 
-const CategoryComponent = props => {
+const CategoryComponent = (props) => {
   const renderItem = (item, idx) => {
     return (
       <MenuItem
@@ -30,7 +28,7 @@ const CategoryComponent = props => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
       }}
     >
       <Typography variant="h5" className="item-desc">
@@ -41,7 +39,7 @@ const CategoryComponent = props => {
           display: "flex",
           alignItems: "center",
           margin: 0,
-          padding: 0
+          padding: 0,
         }}
       >
         <FlatList
