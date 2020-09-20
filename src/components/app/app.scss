@@ -1,0 +1,39 @@
+@import-normalize;
+
+/* Variables */
+$primary-color: #485366;
+$secondary-color: #f29f3a;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: $primary-color;
+}
+
+.-hide {
+  display: none !important;
+}
+
+.order-container {
+  display: flex;
+  justify-content: center;
+
+  .order-item {
+    margin: 15px 0;
+    flex-grow: 1;
+    &.-selected {
+      box-shadow: 0px 0px 1px 4px $secondary-color;
+    }
+
+    .item-title,
+    .item-info,
+    .item-desc {
+      color: $primary-color;
+    }
+  }
+}
